@@ -23,6 +23,17 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
                 // count the times this occurs
                 .count();
 
+
+        //      TO SOLVE WITH LOOPING:
+
+//        int count = 0;   // Use a counter
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == number) {  // if intArray[i] equal to number
+//                count++;
+//            }
+//        }
+//        return count;
+
     }
 
     @Override
@@ -41,7 +52,27 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
                 //convert stream back to new array
                 .toArray(Integer[]::new);
 
-//        return new Integer[0];
+
+//          IF YOU WANT TO USE A FOR LOOP TO SOLVE:
+
+
+//        int numberOfElements = 0;
+//        for (int i = 0; i < array.length; i++) {  // Run a for loop through the array that was given
+//            if (countNumberOccurences(array[i]) < maxNumberOfDuplications) {
+//                numberOfElements++;  // Size of new array
+//            }
+//        }
+//        int tracker = 0;
+//        Integer[] newArray = new Integer [numberOfElements];
+//        for (int j = 0; j < array.length; j++) {
+//            if (countNumberOccurences(array[j]) < maxNumberOfDuplications) {
+//                newArray[tracker] = array[j];  // Place values in new array using tracker
+//                tracker++;
+//            }
+//        }
+//        return newArray;
+
+
     }
 
     @Override
@@ -54,5 +85,26 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
 
 
 //        return new Integer[0];
+
+
+//          FOR SOLVING WITH LOOPS:
+
+
+//        int numberOfElements = 0;
+//        for (int i = 0; i < array.length; i++) {  // Run a for loop through the array that was given
+//            if (countNumberOccurences(array[i]) != exactNumberOfDuplications) {
+//                numberOfElements++;  // Size of new array
+//            }
+//        }
+//        int tracker = 0;
+//        Integer[] newArray = new Integer[numberOfElements];
+//        for (int j = 0; j < array.length; j++) {
+//            if (countNumberOccurences(array[j]) != exactNumberOfDuplications) {
+//                newArray[tracker] = array[j];  // Place values in new array using tracker
+//                tracker++;
+//            }
+//        }
+//        return newArray;
     }
+
 }
